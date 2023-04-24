@@ -122,7 +122,7 @@
 		</datalist>
     </div>
 
-<center><input class ="my_input" type="submit" value="Enviar"></center>
+<center><input class ="my_input" type="submit" value="Continuar"></center>
 </form>
 </body>
 </html>
