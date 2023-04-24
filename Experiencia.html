@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario CV</title>
+	<meta  charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			font-size: 35px;
+			margin: 0 auto;
+          max-width: 500px;
+		}
+		.grid_2{
+			display: grid;
+  			gap: 10px;
+  			margin-right: 20px;
+			grid-template-columns: 50% 50%;
+			margin: 0 auto;
+          	max-width: 500px;
+			font-size: 25px;
+				
+		}
+		.grid_title
+		{
+			font-size: 60px;
+        	background-color: rgb(255, 255,255);
+          	padding: 10px;   	
+		}
+		label {
+			margin-bottom: 5px;
+		}
+
+		input[type="submit"] {
+			margin-top: 10px;
+		}
+		.my_input
+		{
+			width:300px;
+			height:35px;
+			font-size: 20px;
+		}
+		.my_text
+		{
+			width:700px;
+			height:50px;
+			font-size: 20px;
+		}
+	</style>
+	<div class = "grid_title">
+		<center><p> Describe tu experiencia laboral</p></center>
+	</div>
+</head>
+<body>
+    <form id="Experiencia" action="formacion.php" method="post">
+	<div class="container">
+
+
+		<label for="puesto">Puesto/Ocupacion</label>
+		<input class = "my_input" type="text" id="puesto" name="puesto" list="puesto_list" required>
+		<datalist id="puesto_list">
+			<option value="Trabajador Social">
+			<option value="Programador">
+			<option value="Investigador">
+			<option value="Recursos Humanos">
+			<option value="Analista de datos">
+		</datalist><br>
+
+		<label for="pais">Pais donde trabajó</label>
+		<input class = "my_input" type="text" id="pais" name="pais" list="pais_list" required>
+		<datalist id="pais_list">
+			<option value="Perú">
+			<option value="Argentina">
+			<option value="Ecuador">
+			<option value="Bolivia">
+			<option value="Chile">
+		</datalist><br>
+		
+		</div>
+		<p class = "container">¿Cuándo trabajaste en este puesto? </p>
+		<br>
+	<div class = "grid_2">
+		
+		<label for="finicio" >Fecha de inicio</label>
+		<input class ="my_input" type = "month" id="finicio" name="finicio" required>
+		<label for="ffinal">Fecha de fin</label>
+		<input class ="my_input" type = "month" id="ffinal" name="ffinal" required>
+	</div>
+	<br>
+	<div class ="container">
+	<label for="funcion1">Funciones que realizó</label>
+	<textarea  class = "my_text" id="funcion1" name="funcion1" rows="10" cols="100" required></textarea>
+
+	<label for="funcion2"></label>
+	<textarea  class = "my_text" id="funcion2" name="funcion2" rows="10" cols="100" required></textarea>
+
+	<label for="funcion3"></label>
+	<textarea  class = "my_text" id="funcion3" name="funcion3" rows="10" cols="100" required></textarea>
+
+	<label for="funcion4"></label>
+	<textarea  class = "my_text" id="funcion4" name="funcion4" rows="10" cols="100" required></textarea>
+	</div>
+
+<center><input class ="my_input" type="submit" value="Continuar"></center>
+</form>
+</body>
+</html>
